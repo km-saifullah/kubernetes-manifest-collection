@@ -1,0 +1,9 @@
+# This is basic structure of a yaml file of Kubernetes
+
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+
+spec:

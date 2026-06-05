@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    app: nginx
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+
+# cmd
+# kubectl apply -f pod.yaml
+
+# Verify
+# kubectl get pods
+# kubectl describe pod nginx-pod

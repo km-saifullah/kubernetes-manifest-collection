@@ -1,0 +1,49 @@
+==================================
+pod.yaml file execution commands
+    - kubectl apply -f pod.yaml
+    - kubectl get pods
+    - kubectl describe pod nginx-pod
+
+
+Explanation
+------------
+| Field         | Purpose                   |
+| ------------- | ------------------------- |
+| apiVersion    | Kubernetes API version    |
+| kind          | Resource type             |
+| metadata      | Name and labels           |
+| spec          | Desired state             |
+| containers    | List of containers        |
+| image         | Container image           |
+| containerPort | Port exposed by container |
+
+==================================
+
+==================================
+replicaset.yaml file execution commands
+    - kubectl apply -f replicaset.yaml
+    - kubectl get rs
+    - kubectl get pods
+    - kubectl delete pod <pod-name>
+
+Explanation
+------------
+| Field    | Purpose                            |
+| -------- | ---------------------------------- |
+| replicas | Number of Pod copies               |
+| selector | Matches Pods managed by ReplicaSet |
+| template | Blueprint for Pod creation         |
+
+===================================
+
+===================================
+deployment.yaml file execution commands
+    - kubectl apply -f deployment.yaml
+    - kubectl get deployments
+    - kubectl get rs
+    - kubectl get pods
+    - kubectl scale deployment nginx-deployment --replicas=5 # scaling
+    - kubectl set image deployment/nginx-deployment nginx=nginx:1.26 # rolling update
+    - kubectl rollout status deployment/nginx-deployment
+    - kubectl rollout history deployment nginx-deployment # rollback
+    - kubectl get all
