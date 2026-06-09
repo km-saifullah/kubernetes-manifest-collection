@@ -1,4 +1,4 @@
-==================================
+#=========================================================================
 pod.yaml file execution commands
     - kubectl apply -f pod.yaml
     - kubectl get pods
@@ -17,9 +17,9 @@ Explanation
 | image         | Container image           |
 | containerPort | Port exposed by container |
 
-==================================
+#=========================================================================
 
-==================================
+#=========================================================================
 replicaset.yaml file execution commands
     - kubectl apply -f replicaset.yaml
     - kubectl get rs
@@ -34,9 +34,9 @@ Explanation
 | selector | Matches Pods managed by ReplicaSet |
 | template | Blueprint for Pod creation         |
 
-===================================
+#=========================================================================
 
-===================================
+#=========================================================================
 deployment.yaml file execution commands
     - kubectl apply -f deployment.yaml
     - kubectl get deployments
@@ -47,3 +47,12 @@ deployment.yaml file execution commands
     - kubectl rollout status deployment/nginx-deployment
     - kubectl rollout history deployment nginx-deployment # rollback
     - kubectl get all
+#=========================================================================
+
+demo-service.yaml file execution commands
+    - kubectl create -f demo-service.yaml 
+    - kubectl get services
+    - kubectl get svc
+    - kubectl describe service <service-name> 
+    - kubectl delete service <service-name>
+#=========================================================================
